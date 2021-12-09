@@ -1,9 +1,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Testing API" verbose="1" >
-  <test name="RestAssured API Automation" >
+<suite name="RestAssured API Automation" verbose="1" >
+  <test name="ReqRes API Automation" >
     <classes>
-        <class name="com.demo.tests.HttpMethodsAPITest" />
+        <class name="com.demo.tests.CreateUser" />
+        <class name="com.demo.tests.GetUsers" />
+        <class name="com.demo.tests.DeleteUser" />
+        <class name="com.demo.tests.UpdateUser" />
     </classes>
   </test>
   <test name="Local API" >

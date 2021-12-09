@@ -6,3 +6,6 @@ target/
 test-output/
 report/
 bin/
+tests.html
+extent-Config.json
+extent-Config.xml

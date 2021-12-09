@@ -48,6 +48,12 @@
       "lastName": "Root",
       "subjectId": 1,
       "id": 8
+    },
+    {
+      "firstName": "Rohit Gurunath",
+      "lastName": "Sharma",
+      "categoryId": 1,
+      "id": 9
     }
   ],
   "category": [

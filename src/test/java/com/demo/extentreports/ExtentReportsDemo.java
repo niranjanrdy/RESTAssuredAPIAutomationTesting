@@ -28,7 +28,9 @@ public class ExtentReportsDemo {
 		test.info("Values Entered");
 		test.pass("login test completed successfully");
 		
-		ExtentTest newTest = extent.createTest("Home page test").assignCategory("Regression").assignAuthor("Otis").assignAuthor("Gibson").assignDevice("Firefox 61");//create test node in the report
+		ExtentTest newTest = extent.createTest("Home page test").
+				assignCategory("Regression").assignAuthor("Otis").
+				assignAuthor("Gibson").assignDevice("Firefox 61");//create test node in the report
 		newTest.pass("HOME PAGE TESTED SUCCESSFULLY");// create a test node in the report
 		newTest.info("URL is Loaded");
 		newTest.info("Values Entered");
