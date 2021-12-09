@@ -17,7 +17,7 @@ public class HttpMethodsAPITest extends MainURL {
 	public void createUserTest() {
 		String name ="Chetan";
 		String job ="Tech Manager";
-		
+		MainURL.createTest("create user test", "Regression");
 		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(createUserPayLoad(name,job))
 				            .when().post("/users")
 				            .then().log().all().extract().response();
@@ -33,7 +33,7 @@ public class HttpMethodsAPITest extends MainURL {
 		Response response =  given().accept(ContentType.JSON).queryParam("page",pageNumber)
 				.when().get("users")
 				.then().log().all().extract().response();
-
+		MainURL.createTest("get list of users", "Regression");
 		Assert.assertEquals(response.getStatusCode(), 200);
 		Assert.assertEquals(response.jsonPath().getInt("page"), 1);
 		Assert.assertEquals(response.jsonPath().getInt("per_page"), 6);
@@ -48,7 +48,7 @@ public class HttpMethodsAPITest extends MainURL {
 		Response response = given().accept(ContentType.JSON)
 				.when().get("users/"+id)
 				.then().log().all().extract().response();
-	 
+		MainURL.createTest("Get user by ID", "Regression");
 		Assert.assertEquals(response.statusCode(),200);
 		Assert.assertEquals(response.jsonPath().getInt("data.id"),1);
 		Assert.assertEquals(response.jsonPath().getString("data.email"),"george.bluth@reqres.in");
@@ -59,6 +59,7 @@ public class HttpMethodsAPITest extends MainURL {
 	public void updateUserTestByPutMethod() {
 		String name = "Otis Milburn";
 		String job = "Therapist";
+		MainURL.createTest("Update user test", "Smoke");
 		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(updateUserPayLoad(name,job))
 				.when().put("/users/2")
 				.then().log().all().extract().response();
@@ -77,6 +78,7 @@ public class HttpMethodsAPITest extends MainURL {
 	public void updateUserTestByPatchMethod() {
 		String name = "Kane";
 		String job = "Batter";
+		MainURL.createTest("update user test by patch method", "Regression");
 		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON).body(updateUserPayLoad(name,job))
 				.when().put("/users/1")
 				.then().log().all().extract().response();
@@ -89,7 +91,7 @@ public class HttpMethodsAPITest extends MainURL {
 	}
 	@Test(priority=5)
 	public void deleteAUser() {
-		
+		MainURL.createTest("delete user test", "Regression");
 		Response response = given()
 							.when().delete("users/2")
 							.then().log().all().extract().response();
