@@ -1,0 +1,79 @@
+{
+  "cricketer": [
+    {
+      "id": 1,
+      "firstName": "Virat",
+      "lastName": "Kohli",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Kane",
+      "lastName": "Williamson",
+      "categoryId": 1,
+      "subjectId": 3
+    },
+    {
+      "id": 4,
+      "firstName": "Rishab",
+      "lastName": "Pant",
+      "categoryId": 4
+    },
+    {
+      "firstName": "Bhuvneshwar",
+      "lastName": "Kumar",
+      "subjectId": 2,
+      "id": 5
+    },
+    {
+      "firstName": "Jos",
+      "lastName": "Buttler",
+      "subjectId": 4,
+      "id": 6
+    },
+    {
+      "id": 5,
+      "firstName": "Ravindra",
+      "lastName": "Jadeja",
+      "subjectId": 3
+    },
+    {
+      "firstName": "Steve",
+      "lastName": "Smith",
+      "subjectId": 1,
+      "id": 7
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Root",
+      "subjectId": 1,
+      "id": 8
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Batter"
+    },
+    {
+      "id": 2,
+      "name": "Bowler"
+    },
+    {
+      "name": "All Rounder",
+      "id": 3
+    },
+    {
+      "name": "Wkt Keeper",
+      "id": 4
+    },
+    {
+      "name": "Coach",
+      "id": 5
+    },
+    {
+      "name": "Coach",
+      "id": 6
+    }
+  ]
+}
