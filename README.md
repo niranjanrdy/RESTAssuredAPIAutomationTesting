@@ -49,7 +49,7 @@ This is a maven project where various API calls are validated and tested using `
 ## Getting Started
 1. Clone Repository
 ```bash
-    git clone https://github.com/niranjanrdy/RESTAssuredAPIAutomation.git
+    git clone https://github.com/niranjanrdy/RESTAssuredAPIAutomationTesting.git
 ```
 2. Clone the repository to your system.
 
