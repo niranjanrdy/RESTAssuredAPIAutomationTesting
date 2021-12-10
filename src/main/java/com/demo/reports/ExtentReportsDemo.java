@@ -1,4 +1,4 @@
-package com.demo.extentreports;
+package com.demo.reports;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,11 +16,6 @@ public class ExtentReportsDemo {
 		ExtentSparkReporter spark = new ExtentSparkReporter("tests.html");
 		final File CONF = new File("extent-Config.json");
 		spark.loadJSONConfig(CONF);
-		
-//		spark.config().setTheme(Theme.DARK);
-//		spark.config().setDocumentTitle("API Automation Report");
-//		spark.config().setReportName("ExtentReports");
-		extent.attachReporter(spark);
 		
 		ExtentTest test = extent.createTest("Login Test").assignAuthor("Milburn").assignCategory("Smoke").assignDevice("chrome 96");//create test node in the report
 		test.pass("LOGIN TEST PASSED SUCCESSFULLY");// create a test node in the report

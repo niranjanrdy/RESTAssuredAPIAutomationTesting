@@ -15,13 +15,12 @@ public class GetUsers extends BaseTest {
 		Response response =  given().accept(ContentType.JSON).queryParam("page",pageNumber)
 				.when().get("users")
 				.then().extract().response();
-		BaseTest.createTest("get list of users", "Regression");
 		Assert.assertEquals(response.getStatusCode(), 200);
 		Assert.assertEquals(response.jsonPath().getInt("page"), 1);
 		Assert.assertEquals(response.jsonPath().getInt("per_page"), 6);
 		Assert.assertEquals(response.jsonPath().getInt("total"), 12);
 		Assert.assertEquals(response.jsonPath().getInt("total_pages"),2);
-		Assert.assertTrue(response.jsonPath().getString("data.email").contains("@reqres.in"));
+		Assert.assertTrue(response.jsonPath().getString("data.email").contains("@rees.in"));
 		Assert.assertTrue(response.jsonPath().getString("support.url").contains("reqres.in") );
 	}
 	@Test(priority=1)
@@ -30,7 +29,6 @@ public class GetUsers extends BaseTest {
 		Response response = given().accept(ContentType.JSON)
 				.when().get("users/"+id)
 				.then().extract().response();
-		BaseTest.createTest("Get user by ID", "Regression");
 		Assert.assertEquals(response.statusCode(),200);
 		Assert.assertEquals(response.jsonPath().getInt("data.id"),1);
 		Assert.assertEquals(response.jsonPath().getString("data.email"),"george.bluth@reqres.in");

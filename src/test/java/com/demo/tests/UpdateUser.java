@@ -16,7 +16,6 @@ public class UpdateUser {
 	public void updateUserTestByPutMethod() {
 		String name = "Otis Milburn";
 		String job = "Therapist";
-		BaseTest.createTest("Update user test", "Smoke");
 		Response response = given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON).body(updateUserPayLoad(name,job))
 				.when().put("/users/2")
@@ -33,7 +32,6 @@ public class UpdateUser {
 	public void updateUserTestByPatchMethod() {
 		String name = "Kane";
 		String job = "Batter";
-		BaseTest.createTest("update user test by patch method", "Regression");
 		Response response = given().contentType(ContentType.JSON)
 				.accept(ContentType.JSON).body(updateUserPayLoad(name,job))
 				.when().put("/users/1")

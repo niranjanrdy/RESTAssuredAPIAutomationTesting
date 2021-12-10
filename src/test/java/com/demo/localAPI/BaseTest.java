@@ -1,13 +1,12 @@
-package com.demo.tests;
+package com.demo.localAPI;
 
 import static io.restassured.RestAssured.baseURI;
 
 import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
-
 	@BeforeTest
 	public void setUp() {
-		baseURI = "https://reqres.in/api";
+		baseURI="http://localhost:3000";
 	}
 }

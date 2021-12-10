@@ -16,7 +16,7 @@ public class CreateUser {
 	public void createUserTest() {
 		String name ="Chetan";
 		String job ="Tech Manager";
-		BaseTest.createTest("create user test", "Regression");
+		
 		Response response = given().contentType(ContentType.JSON).accept(ContentType.JSON)
 							.body(createUserPayLoad(name,job))
 				            .when().post("/users")
